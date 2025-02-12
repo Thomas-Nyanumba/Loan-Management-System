@@ -1,0 +1,38 @@
+<div class="customer-table-container">
+    <h2>Customers</h2>
+    
+    <!-- Customer Table -->
+    <table class="customer-table">
+      <thead>
+        <tr>
+          <th>Customer ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Total Loans Taken</th>
+          <th>Total Amount Borrowed</th>
+          <th>Total Outstanding Amount</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>{{ customer.customerId }}</td>
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.phone }}</td>
+          <td>{{ customer.totalLoansTaken }}</td>
+          <td>{{ customer.totalAmountBorrowed | currency }}</td>
+          <td>{{ customer.totalOutstandingAmount | currency }}</td>
+          <td>{{ customer.status }}</td>
+          <td>
+            <button class="edit-btn" (click)="editCustomer(customer)">Edit</button>
+          <button class="delete-btn" (click)="deleteCustomer(customer)" [contentEditable] ="!canDeleteCustomer(customer)">Delete</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

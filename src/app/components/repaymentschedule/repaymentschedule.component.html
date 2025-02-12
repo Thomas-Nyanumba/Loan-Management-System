@@ -1,0 +1,35 @@
+<div class="repayment-container">
+    <h2>Repayment Schedule</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Loan ID</th>
+          <th>Customer Name</th>
+          <th>Due Date</th>
+          <th>Installment Amount</th>
+          <th>Principal</th>
+          <th>Interest</th>
+          <th>Paid</th>
+          <th>Balance</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let schedule of repaymentSchedule">
+          <td>{{ schedule.loanID }}</td>
+          <td>{{ schedule.customerName }}</td>
+          <td>{{ schedule.dueDate }}</td>
+          <td>{{ schedule.installmentAmount | currency }}</td>
+          <td>{{ schedule.principal | currency }}</td>
+          <td>{{ schedule.interest | currency }}</td>
+          <td>{{ schedule.paid | currency }}</td>
+          <td>{{ schedule.balance | currency }}</td>
+          <td>
+            <span class="status" [ngClass]="getStatusClass(schedule.status)">{{ schedule.status }}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

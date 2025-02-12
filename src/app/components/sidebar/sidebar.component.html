@@ -1,0 +1,16 @@
+<div class="sidebar" [class.open]="isSidebarOpen" *ngIf="this.authService.isAuthenticated()">
+    <div class="sidebar-header">
+      <h3>Loan Management</h3>
+      <button (click)="toggleSidebar()">Toggle</button>
+    </div>
+    <ul class="sidebar-nav">
+        <li><a routerLink="/dashboard">Dashboard</a></li>
+        <li><a  routerLink="/customers">Customers</a></li>
+        <li><a routerLink="/loans">Loans</a></li>
+        <li><a routerLink="/repayments">Repayments</a></li>
+        <!-- <li><a routerLink="/login">Login</a></li> -->
+        <li><a routerLink="/users">Register</a></li>
+    </ul>
+  </div>
+  
+  

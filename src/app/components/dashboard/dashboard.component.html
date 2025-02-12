@@ -1,0 +1,26 @@
+<div class="dashboard">
+    <!-- Cards Section -->
+    <div class="card-container">
+      <div class="card">
+        <h3>Total Loans Disbursed</h3>
+        <p>${{ totalLoansDisbursed | number }}</p>
+      </div>
+  
+      <div class="card">
+        <h3>Total Customers</h3>
+        <p>{{ totalCustomers }}</p>
+      </div>
+    </div>
+  
+    <!-- Charts Section -->
+    <div class="charts-container">
+      <div class="chart">
+        <canvas id="lineChart"></canvas>
+      </div>
+  
+      <div class="chart">
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+  </div>
+  

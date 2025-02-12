@@ -1,0 +1,54 @@
+<div class="users-container">
+    <h2>User Management</h2>
+  
+    <!-- Add New User Form -->
+    <div class="add-user-form">
+      <h3>Add User</h3>
+      <form (ngSubmit)="addUser()">
+        <label for="name">Name</label>
+        <input type="text" id="name" [(ngModel)]="newUser.name" name="name" required>
+  
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="newUser.email" name="email" required>
+  
+        <label for="contact">Contact</label>
+        <input type="text" id="contact" [(ngModel)]="newUser.contact" name="contact" required>
+  
+        <label for="role">Role</label>
+        <select id="role" [(ngModel)]="newUser.role" name="role">
+          <option value="admin">Treasurer</option>
+          <option value="manager">Credit Admin</option>
+        </select>
+          <button class="small-button">Add</button>
+      </form>
+    </div>
+  
+    <!-- Users Table -->
+    <div class="users-table">
+      <h3>Existing Users</h3>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.contact }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+              <button (click)="editUser(user.id)">Edit</button>
+              <button (click)="deleteUser(user.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

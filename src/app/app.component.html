@@ -1,0 +1,14 @@
+<app-sidebar></app-sidebar>
+    
+    <nav><!-- Sidebar -->
+  
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navbar with toggle button -->
+        <button routerLink="/login" class="logout-button" (click)="onLogout()" *ngIf="this.authService.isAuthenticated()">Logout</button>
+  
+      <!-- Router Outlet (Displays components dynamically) -->
+      <router-outlet></router-outlet>
+    </div>
+  
+  

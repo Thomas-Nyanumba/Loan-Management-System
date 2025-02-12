@@ -1,0 +1,88 @@
+/* Customer Table Container */
+.customer-table-container {
+    margin: 0px auto; /* Center the container horizontally */
+    padding: 20px;
+    max-width: calc(100% - 240px); /* Adjust width to avoid getting into the sidebar */
+    width: 100%;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0px;
+    text-align: center; /* Center the heading */
+  }
+  
+  /* Table Styles */
+  .customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0px;
+  }
+  
+  .customer-table th, .customer-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  
+  .customer-table th {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .customer-table td {
+    background-color: #f9f9f9;
+  }
+  
+  .customer-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Button Styles */
+
+  button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .edit-btn {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color:red;
+  }
+  
+  .delete-btn:enabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+  }
+  
+  
+  /* Red for Active */
+.active-status {
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Green for Cleared */
+.cleared-status {
+  background-color: #2ecc71;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
