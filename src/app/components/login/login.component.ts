@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+    // we could use an object here to contain all the properties instead of listing them one by one. e.g. logins = {list them, , separated}
   email: string = '';
   password: string = '';
   errorMessage = ';'

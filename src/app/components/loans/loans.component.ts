@@ -91,7 +91,7 @@ export class LoanComponent implements OnInit {
   }
 
   /** Delete Loan */
-  deleteLoan(loan: any) {
+  deleteLoan(loan: any) { // this is a method whose inside property can be called using the this word.
     if (loan.outstanding > 0) {
       alert(`Cannot delete ${loan.customerName} as they have an outstanding balance of Ksh ${loan.outstanding}.`);
     } else {
@@ -105,7 +105,7 @@ export class LoanComponent implements OnInit {
   }
 
   /** Lifecycle Hook */
-  ngOnInit() {
+  ngOnInit() { 
     this.updateLoanStatus(); // Update status when component loads
     console.log(this.loans);
   }

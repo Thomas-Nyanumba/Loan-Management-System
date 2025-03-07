@@ -43,6 +43,6 @@ export class RepaymentScheduleComponent {
   ];
 
   getStatusClass(status: string): string {
-    return status.toLowerCase();
+    return status.toLowerCase(); // inbuilt method to return output in lowercase. 
   }
 }

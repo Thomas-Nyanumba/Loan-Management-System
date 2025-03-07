@@ -19,11 +19,12 @@
   }
   
   button {
-    padding: 10px 15px;
-    background-color: #3498db;
+    padding: 5px;
+    background-color: green;
     color: white;
     border: none;
     cursor: pointer;
+    margin-right: 55px;
   }
   
   button:hover {

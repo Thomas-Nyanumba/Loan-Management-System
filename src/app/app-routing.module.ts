@@ -16,9 +16,8 @@ const routes: Routes = [
   { path: 'repayments', component: RepaymentScheduleComponent, canActivate: [AuthGuard] },
   { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route
+  // { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route
   { path: '**', redirectTo: '/login' } // Redirect invalid paths to login
-
 
 ];
 

@@ -28,7 +28,8 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [], // can inject instance dependencies here after importing it. It will be available throughout the app. 
+  //therefore, no need to provide the service in specific components
   bootstrap: [AppComponent]
 })
 export class AppModule { }

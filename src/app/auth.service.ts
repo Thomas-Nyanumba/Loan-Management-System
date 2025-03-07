@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' // a declaration to all the service or inject it in all of the entire application. because the provider is root. 
 })
 export class AuthService {
-  constructor(private router: Router) {}
+  
+  constructor(private router: Router) {} // private property parameter router of type router
 
   // Simulate login: Store user status in localStorage
   login(email: string, password: string) {
@@ -19,7 +20,7 @@ export class AuthService {
   // Logout function
   logout() {
     localStorage.removeItem('isLoggedIn');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/login']);     // this shows that the parameter router is a private property
   }
 
   // Check if user is logged in
